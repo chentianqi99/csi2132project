@@ -9,3 +9,12 @@ CREATE TABLE guests_info(
 	g_phone VARCHAR(20),
 	PRIMARY KEY(g_id)
 );
+
+CREATE TABLE branch_info(
+	b_name VARCHAR(20),
+	b_id INTEGER,
+	b_city VARCHAR(20),
+	b_province VARCHAR(20),
+	b_country VARCHAR(20),
+	PRIMARY KEY(b_id)
+);
