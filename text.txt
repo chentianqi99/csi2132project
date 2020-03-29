@@ -18,3 +18,23 @@ CREATE TABLE branch_info(
 	b_country VARCHAR(20),
 	PRIMARY KEY(b_id)
 );
+CREATE TABLE host_info(
+	h_id INTEGER,
+	h_name VARCHAR(20),
+	h_address VARCHAR(20),
+	h_email VARCHAR(20),
+	h_phone INTEGER,
+	PRIMARY KEY(h_id)
+);
+
+CREATE TABLE payment(
+	g_id INTEGER,
+	h_id INTEGER,
+	receipt_number VARCHAR(20),
+	typeOfPayment VARCHAR(20),
+	amountOfPayment NUMERIC(8,2),
+	paymentStatus VARCHAR(20),
+	PRIMARY KEY(typeOfPayment),
+	FOREIGN KEY(g_id) REFERENCES guests_info,
+	FOREIGN KEY (h_id) REFERENCES host_info
+);
