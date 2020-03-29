@@ -1,0 +1,11 @@
+set search_path = "project";
+
+CREATE TABLE guests_info(
+	g_name VARCHAR(20),
+	g_id INTEGER,
+	g_birth DATE,
+	g_address VARCHAR(20),
+	g_email VARCHAR(20),
+	g_phone VARCHAR(20),
+	PRIMARY KEY(g_id)
+);
