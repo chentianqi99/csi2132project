@@ -1,7 +1,5 @@
 set search_path = "project";
 
-set search_path = "project";
-
 CREATE TABLE guests_info(
 	g_firstName VARCHAR(20),
 	g_lastName VARCHAR(20),
