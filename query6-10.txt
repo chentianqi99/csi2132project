@@ -1,0 +1,14 @@
+SELECT h_id, b_id, room_type, p_address, p_type, p_location, p_price
+FROM Property_info
+WHERE rented= true and EXTRACT(DAY FROM dates)= 10;
+
+SELECT g_name, g_id, h_name, p_type, p_address, amountOfPayment, typeOfPayment
+FROM guests_info, host_info, Property_info, payment;
+
+CREATE FUNCTION FirstNameFirst()
+RETURNS VARCHAR(20) AS $g_fullName$
+BEGIN 
+	SELECT CONCAT(g_firstName, ' ', g_lastName) as g_fullName FROM guests_info
+	RETURN g_fullName;
+END;
+$g_fullName$ LANGUAGE plpgsql
