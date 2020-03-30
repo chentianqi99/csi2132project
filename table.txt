@@ -63,3 +63,12 @@ CREATE TABLE agreement(
 	FOREIGN KEY(g_id) REFERENCES guests_info,
 	FOREIGN KEY (h_id) REFERENCES host_info
 );
+CREATE TABLE review_rating(
+	p_address VARCHAR(20),
+	rating NUMERIC(8,2),
+	communication VARCHAR(20),
+	cleanliness VARCHAR(20),
+	value_comment VARCHAR(20),
+	PRIMARY KEY(rating),
+	FOREIGN KEY(p_address) references property_info
+);
