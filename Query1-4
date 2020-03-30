@@ -8,3 +8,8 @@ AS
 SELECT g_name,g_id,g_birth,g_address,g_email,g_phone,b_id
 FROM guests_info,branch_info
 ORDER BY b_id,g_id;
+
+第三题
+SELECT T.p_price
+FROM property_info as T, property_info as S
+WHERE T.p_price<S.P_price and T.rented = true and S.rented = true
