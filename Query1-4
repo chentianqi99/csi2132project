@@ -1,0 +1,3 @@
+SELECT g_name,p_type,p_price,signingDate,b_name,typeOfPayment,paymentStatus
+FROM guests_info,property_info,agreement,branch_info,payment
+ORDER BY typeOfPayment ASC, signingDate DESC;
