@@ -13,3 +13,9 @@ ORDER BY b_id,g_id;
 SELECT T.p_price
 FROM property_info as T, property_info as S
 WHERE T.p_price<S.P_price and T.rented = true and S.rented = true
+
+第四题
+SELECT p_address
+FROM property_info NATURAL JOIN branch_info NATURAL JOIN review_rating
+WHERE rented = true
+ORDER BY b_id,rating
