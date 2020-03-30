@@ -40,6 +40,7 @@ CREATE TABLE payment(
 );
 CREATE TABLE Property_info(
 	h_id INTEGER,
+	b_id INTEGER,
 	available_date DATE,
 	room_type VARCHAR(20),
 	p_address VARCHAR(20),
@@ -48,7 +49,8 @@ CREATE TABLE Property_info(
 	p_price NUMERIC(8,2),
 	rented BOOLEAN,
 	PRIMARY KEY(p_address),
-	FOREIGN KEY(h_id) references host_info
+	FOREIGN KEY(h_id) references host_info,
+	FOREIGN KEY(b_id) references branch_info
 );
 
 CREATE TABLE agreement(
