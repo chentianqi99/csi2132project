@@ -1,0 +1,15 @@
+5
+SELECT  DISTINCT h_id 
+FROM Property_info
+WHERE rented=false;
+
+7
+SELECT id, name, branch_id, branch_name, salary
+FROM manager_info
+WHERE salary>=15000
+ORDER BY manager_id, employee_id;
+
+9
+UPDATE guests_info
+SET g_phone=XXX
+WHERE g_id=XXX
