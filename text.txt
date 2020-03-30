@@ -38,3 +38,25 @@ CREATE TABLE payment(
 	FOREIGN KEY(g_id) REFERENCES guests_info,
 	FOREIGN KEY (h_id) REFERENCES host_info
 );
+CREATE TABLE Property_info(
+	h_id INTEGER,
+	available_date DATE,
+	room_type VARCHAR(20),
+	p_address VARCHAR(20),
+	p_type VARCHAR(20),
+	p_location VARCHAR(20),
+	p_price NUMERIC(8,2),
+	PRIMARY KEY(p_address),
+	FOREIGN KEY(h_id) references host_info
+);
+
+CREATE TABLE agreement(
+	g_id INTEGER,
+	h_id INTEGER,
+	signingDate DATE,
+	startDate DATE,
+	endDate DATE,
+	PRIMARY KEY(signingDate),
+	FOREIGN KEY(g_id) REFERENCES guests_info,
+	FOREIGN KEY (h_id) REFERENCES host_info
+);
