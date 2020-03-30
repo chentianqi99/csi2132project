@@ -46,6 +46,7 @@ CREATE TABLE Property_info(
 	p_type VARCHAR(20),
 	p_location VARCHAR(20),
 	p_price NUMERIC(8,2),
+	rented BOOLEAN,
 	PRIMARY KEY(p_address),
 	FOREIGN KEY(h_id) references host_info
 );
