@@ -1,7 +1,10 @@
 set search_path = "project";
 
+set search_path = "project";
+
 CREATE TABLE guests_info(
-	g_name VARCHAR(20),
+	g_firstName VARCHAR(20),
+	g_lastName VARCHAR(20),
 	g_id INTEGER,
 	g_birth DATE,
 	g_address VARCHAR(20),
@@ -76,4 +79,6 @@ CREATE TABLE review_rating(
 	PRIMARY KEY(rating),
 	FOREIGN KEY(p_address) references property_info
 );
+
+
 
