@@ -1,5 +1,5 @@
 package project.dao;
-
+测试JDBC
 public class test {
 
 	public static void main(String[] args) {
