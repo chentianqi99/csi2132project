@@ -1,3 +1,5 @@
+//JDBC 大概样子
+
 package project.dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
