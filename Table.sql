@@ -79,4 +79,18 @@ CREATE TABLE review_rating(
 	FOREIGN KEY(p_address) references property_info
 );
 
+CREATE TABLE employee(
+	e_id INTEGER,
+	basicInformation VARCHAR(20),
+	position VARCHAR(20),
+	salary INTEGER
+);
+
+CREATE TABLE manager(
+	m_id INTEGER,
+	m_basicInformation VARCHAR(20),
+	m_position VARCHAR(20),
+	m_salary INTERGER
+);
+
 
