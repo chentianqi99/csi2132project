@@ -34,10 +34,10 @@ FROM Property_info
 WHERE rented= true and EXTRACT(DAY FROM dates)= 10;
 
 /* query number 7 */
-SELECT id, name, branch_id, branch_name, salary
-FROM manager_info
-WHERE salary>=15000
-ORDER BY manager_id, employee_id;
+SELECT e_id, e_name, e_branch_id, e_branch_name, e_salary,m_id,m_name,m_branch_id,m_branch_name,m_salary
+FROM manager,employee
+WHERE e_salary>=15000 and m_salary>=15000
+ORDER BY m_id, e_id;
 
 /* query number 8 */
 SELECT g_name, g_id, h_name, p_type, p_address, amountOfPayment, typeOfPayment
