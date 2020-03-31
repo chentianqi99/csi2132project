@@ -81,16 +81,28 @@ CREATE TABLE review_rating(
 
 CREATE TABLE employee(
 	e_id INTEGER,
-	basicInformation VARCHAR(20),
-	position VARCHAR(20),
-	salary INTEGER
+	e_basicInformation VARCHAR(20),
+	e_position VARCHAR(20),
+	e_salary INTEGER,
+	e_name VARCHAR(20),
+	e_branch_id INTEGER,
+	e_branch_name VARCHAR(20),
+	PRIMARY KEY(e_id),
+	FOREIGN KEY(e_branch_id) REFERENCES branch_info
+	FOREIGN KEY(e_branch_name) REFERENCES branch_info
 );
 
 CREATE TABLE manager(
 	m_id INTEGER,
 	m_basicInformation VARCHAR(20),
 	m_position VARCHAR(20),
-	m_salary INTERGER
+	m_salary INTEGER,
+	m_name VARCHAR(20),
+	m_branch_id INTEGER,
+	m_branch_name VARCHAR(20),
+	PRIMARY KEY(m_id),
+	FOREIGN KEY(m_branch_id) REFERENCES branch_info
+	FOREIGN KEY(m_branch_name) REFERENCES branch_info
 );
 
 
