@@ -1,14 +1,14 @@
 set search_path = "project";
 
 /* query number 1 */
-SELECT g_name,p_type,p_price,signingDate,b_name,typeOfPayment,paymentStatus
+SELECT g_fullName,p_type,p_price,signingDate,b_name,typeOfPayment,paymentStatus
 FROM guests_info,property_info,agreement,branch_info,payment
 ORDER BY typeOfPayment ASC, signingDate DESC;
 
 /* query number 2 */
 CREATE VIEW GuestListView
 AS
-SELECT g_name,g_id,g_birth,g_address,g_email,g_phone,b_id
+SELECT g_fullName,g_id,g_birth,g_address,g_email,g_phone,b_id
 FROM guests_info,branch_info
 ORDER BY b_id,g_id;
 
