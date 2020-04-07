@@ -102,10 +102,7 @@ CREATE TABLE manager(
 	m_salary INTEGER,
 	m_name VARCHAR(20),
 	m_branch_id INTEGER,
-	m_branch_name VARCHAR(20),
 	PRIMARY KEY(m_id),
 	FOREIGN KEY(m_branch_id) REFERENCES branch_info
-	FOREIGN KEY(m_branch_name) REFERENCES branch_info
 );
-
 
