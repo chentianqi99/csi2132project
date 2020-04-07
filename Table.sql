@@ -93,7 +93,12 @@ CREATE TABLE employee(
 
 );
 
-
+CREATE TABLE admin_info(
+	a_name VARCHAR(20),
+	a_id INTEGER,
+	a_password VARCHAR(20),
+	Primary key(a_id)
+);
 
 CREATE TABLE manager(
 	m_id INTEGER,
