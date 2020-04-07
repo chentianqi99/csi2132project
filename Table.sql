@@ -85,12 +85,15 @@ CREATE TABLE employee(
 	e_position VARCHAR(20),
 	e_salary INTEGER,
 	e_name VARCHAR(20),
-	e_branch_id INTEGER,
-	e_branch_name VARCHAR(20),
+	b_id INTEGER,
+
 	PRIMARY KEY(e_id),
-	FOREIGN KEY(e_branch_id) REFERENCES branch_info
-	FOREIGN KEY(e_branch_name) REFERENCES branch_info
+	FOREIGN KEY(b_id) REFERENCES branch_info
+
+
 );
+
+
 
 CREATE TABLE manager(
 	m_id INTEGER,
