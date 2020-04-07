@@ -86,7 +86,7 @@ CREATE TABLE employee(
 	e_salary INTEGER,
 	e_name VARCHAR(20),
 	b_id INTEGER,
-
+	password VARCHAR(20),
 	PRIMARY KEY(e_id),
 	FOREIGN KEY(b_id) REFERENCES branch_info
 
